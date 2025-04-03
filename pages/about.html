@@ -41,16 +41,45 @@
 
     <section class="container my-5">
         <div class="row">
-            <div class="col-md-8">
-                <h2>Our Mission</h2>
-                <p>Our goal is to provide reliable, high-quality handyman services that help you maintain and improve your home.</p>
+            
+            <div class="col-md-4 order-md-0 order-1">
+                <img src="../assets/Tools.jpeg" alt="Handyman tools" 
+                     class="img-fluid rounded mb-3 sync-slide-left">
             </div>
-            <div class="col-md-4">
-                <img src="../images/tools.jpg" alt="Handyman tools" class="img-fluid rounded">
+    
+           
+            <div class="col-md-4 order-md-1 order-0">
+                <h2 class="text-center">Our Mission</h2>  <!-- Added text-center class -->
+                <p style="color: black;">Our goal is to provide reliable, high-quality handyman services that help you maintain and improve your home.</p>
+            </div>
+    
+            
+            <div class="col-md-4 order-md-2 order-2">
+                <img src="../assets/Tools.jpeg" alt="Handyman tools" 
+                     class="img-fluid rounded sync-slide-right">
             </div>
         </div>
     </section>
-
+    
+    <style>
+        .sync-slide-left {
+            animation: slideLeft 3s infinite alternate;
+        }
+        
+        .sync-slide-right {
+            animation: slideRight 3s infinite alternate;
+        }
+        
+        @keyframes slideLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+        
+        @keyframes slideRight {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-20px); }
+        }
+    </style>
     <section class="bg-light py-5">
         <div class="container">
             <h2 class="text-center">Why Choose Us?</h2>
