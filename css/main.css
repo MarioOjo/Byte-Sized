@@ -1,3 +1,7 @@
+body{
+    background-color: #1b1b1b;
+}
+
 .custom-navbar-bg{
     background-color: #808080;
 }
@@ -20,4 +24,9 @@
     height: 450px;
     padding-top: 15vh;
     padding-left: 1vw;
+  }
+  
+  .footerStuff{
+    display: flex;
+    flex-direction: row;
   }
