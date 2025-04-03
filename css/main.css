@@ -42,6 +42,7 @@ body{
     
   h2{
     color: #ffa31a;
+    text-shadow: 1px 1px #000000;
   }
 
   .cta-button {
