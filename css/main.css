@@ -26,7 +26,3 @@ body{
     padding-left: 1vw;
   }
   
-  .footerStuff{
-    display: flex;
-    flex-direction: row;
-  }
