@@ -9,3 +9,15 @@
 .nav-link:hover{
     color: #ffa31a;
 }
+
+.hero-text {
+    background-image: linear-gradient(to right, #292929 40%, rgba(245, 230, 218, 0) 100%), url('../assets/banner.jpeg');
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 450px;
+    padding-top: 15vh;
+    padding-left: 1vw;
+  }
