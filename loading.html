@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyMen - Loading</title>
+    <style>
+        body { margin: 0; padding: 0; background: #1b1b1b; height: 100vh; display: flex; justify-content: center; align-items: center; font-family: Arial; cursor: pointer; }
+        .container { text-align: center; }
+        .logo { max-width: 300px; margin-bottom: 20px; animation: pulse 2s infinite alternate; }
+        .loader { position: relative; width: 200px; height: 200px; margin: 20px auto; }
+        .loader:before, .loader:after {
+            content: ""; position: absolute; background: #ffa31a; border-radius: 50%; 
+            animation: bounce 1s infinite alternate; 
+        }
+        .loader:before { top: 85px; left: 15px; width: 50px; height: 50px; }
+        .loader:after { top: 25px; left: 80px; width: 40px; height: 40px; animation-direction: alternate-reverse; }
+        .progress { width: 60%; max-width: 400px; height: 8px; background: rgba(255,255,255,0.1); margin: 20px auto; overflow: hidden; }
+        .progress-bar { height: 100%; width: 0; background: #ffa31a; transition: width 3s linear; }
+        .text { color: white; margin: 10px 0; }
+        .fade-out { animation: fadeOut 1s forwards; }
+        @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.9; } 100% { transform: scale(1); opacity: 1; } }
+        @keyframes bounce { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(-30px) scale(1.1); } }
+        @keyframes fadeOut { to { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="../assets/handyMen.png" alt="HandyMen" class="logo">
+        <div class="loader"></div>
+        <div class="text" id="text">Click to begin</div>
+        <div class="progress"><div class="progress-bar" id="progress"></div></div>
+    </div>
+
+    <audio id="sound" src="../assets/246940-b59fc76a-4052-4387-a6a7-8cc68c73c760.mp3"></audio>
+
+    <script>
+        const start = () => {
+            document.getElementById('text').textContent = "Getting your tools ready...";
+            document.getElementById('progress').style.width = "100%";
+            document.getElementById('sound').play().catch(e => console.log(e));
+            setTimeout(() => {
+                document.getElementById('container').classList.add('fade-out');
+                setTimeout(() => window.location.href = "../index.html", 1000);
+            }, 3000);
+        };
+        document.addEventListener('click', start, {once: true});
+    </script>
+</body>
+</html>
