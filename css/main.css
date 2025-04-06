@@ -4,8 +4,12 @@ body{
     height: auto;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 104vh rgb(27, 27, 27, 0.7);
+    
 }
-
+body{
+  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+}
 .custom-navbar-bg{
     background-color: #808080;
 }
