@@ -37,11 +37,13 @@ body{
  .key-services img{
     width: 42vw;
     height: 58vh;
+    border-radius: 20px;
   }
 
   .choose-us img{
     width: 48vw;
     height: 65vh;
+    border-radius: 20px;
   }
     
   h2{
