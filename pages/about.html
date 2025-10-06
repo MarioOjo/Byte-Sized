@@ -43,6 +43,28 @@
             transform: scale(1.05);
         }
         
+        /* Make paragraphs visible with black font */
+        p {
+            color: #000000 !important;
+        }
+        
+        /* Horizontal sliding animation for images */
+        @keyframes slideHorizontal {
+            0% {
+                transform: translateX(-20px);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(-20px);
+            }
+        }
+        
+        .team-card img, .mission-card img {
+            animation: slideHorizontal 3s ease-in-out infinite;
+        }
+        
         .feature-icon {
             width: 60px;
             height: 60px;

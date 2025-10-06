@@ -1,0 +1,14 @@
+# Jekyll Configuration for GitHub Pages
+
+# Exclude node_modules and other unnecessary files from Jekyll processing
+exclude:
+  - handymen-app/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - README.md
+  - .gitignore
+  - .git/
+
+# Optional: Set the base URL if your site is in a subdirectory
+# baseurl: "/Byte-Sized"
